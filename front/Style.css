@@ -1,0 +1,69 @@
+body {
+  margin: 0px;
+  padding: 0px;
+}
+
+#allContainer {
+  background-color: aqua;
+  margin-left: auto;
+  margin-right: auto;
+  top: 0px;
+  width: 80%;
+}
+
+.fill-space {
+  flex: 1 1 auto;
+}
+
+.tabTrigger {
+  display: none;
+  padding: 0%;
+}
+
+input:checked + .tabContent {
+  display: block;
+}
+
+.tabContent {
+  display: none;
+}
+
+header {
+  flex: auto;
+  height: 100px;
+  background-color: red;
+}
+header label {
+  margin-top: 10px;
+  width: 20%;
+  padding: 10px;
+  background-color: blue;
+}
+
+.contenido {
+  margin-top: 100px;
+}
+
+footer {
+  background-color: aquamarine;
+  position: fixed;
+  bottom: 0px;
+  width: 80%;
+}
+footer #footerTop {
+  display: inline-flex;
+}
+footer #footerTop #FAQ a {
+  text-decoration: none;
+}
+footer #footerTop #socialMedia {
+  justify-self: flex-end;
+}
+footer #footerTop #socialMedia img {
+  max-width: 50px;
+}
+footer #footerBot {
+  text-align: center;
+}
+
+/*# sourceMappingURL=Style.css.map */
