@@ -1,5 +1,5 @@
 // import { diario } from './llamadaPHP.js';
-import { DIARIO } from './diario.js';
+import { DIARIO } from '../diario.js';
 
 console.log('Diario: ', DIARIO);
 

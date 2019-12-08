@@ -1,7 +1,7 @@
 export var diario;
 function AJAX() {
     const http = new XMLHttpRequest();
-    const url = 'conexionBBDD.php';
+    const url = 'back/conexionBBDD.php';
     
     http.open("GET", url);
     http.onreadystatechange = function recogerDiario() {
