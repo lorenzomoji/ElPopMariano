@@ -1,5 +1,7 @@
-import { diario } from './llamadaPHP.js';
-console.log('Diario: ', diario);
+// import { diario } from './llamadaPHP.js';
+import { DIARIO } from './diario.js';
+
+console.log('Diario: ', DIARIO);
 
 function numerador(evento) {
     return (pulpoTrueEventoTrue(evento) * pulpoFalseEventoFalse(evento)) - (pulpoFalseEventoTrue(evento) - pulpoTrueEventoFalse(evento));
@@ -111,15 +113,14 @@ function pulpoFalseEventoFalse(evento) {
     return contador;
 }
 
-// console.log('Contador Evento True y Pulpo True: ' + pulpoTrueEventoTrue('queixo'));
-// console.log('Contador Evento True y Pulpo False: ' + pulpoFalseEventoTrue('queixo'));
-// console.log('Contador Evento False y Pulpo True: ' + pulpoTrueEventoFalse('queixo'));
-// console.log('Contador Evento False y Pulpo False: ' + pulpoFalseEventoFalse('queixo'));
-// console.log('Resultado Numerador: ' + numerador('queixo'));
-// console.log('Aparicion Evento: ' + aparicionEvento('queixo'));
-// console.log('No aparicion Evento: ' + noAparicionEvento('queixo'));
-// console.log('Transformación Pulpo: ' + transformacionPulpo());
-// console.log('No transformación Pulpo: ' + noTransformacionPulpo());
-// console.log('Resultado Denominador: ' + denominador('queixo'));
-// console.log('Resultado Funcion Phi: ' + calcularPhi('queixo'));
-
+console.log('Contador Evento True y Pulpo True: ' + pulpoTrueEventoTrue('queixo'));
+console.log('Contador Evento True y Pulpo False: ' + pulpoFalseEventoTrue('queixo'));
+console.log('Contador Evento False y Pulpo True: ' + pulpoTrueEventoFalse('queixo'));
+console.log('Contador Evento False y Pulpo False: ' + pulpoFalseEventoFalse('queixo'));
+console.log('Resultado Numerador: ' + numerador('queixo'));
+console.log('Aparicion Evento: ' + aparicionEvento('queixo'));
+console.log('No aparicion Evento: ' + noAparicionEvento('queixo'));
+console.log('Transformación Pulpo: ' + transformacionPulpo());
+console.log('No transformación Pulpo: ' + noTransformacionPulpo());
+console.log('Resultado Denominador: ' + denominador('queixo'));
+console.log('Resultado Funcion Phi: ' + calcularPhi('queixo'));

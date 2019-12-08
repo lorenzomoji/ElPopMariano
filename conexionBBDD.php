@@ -42,11 +42,11 @@
         $a ->eventos = $eventos;
         $a ->pop = $pop; //Cambiar para que en vez de que devuelva un 0 sea un false
         if ($a != 'false') {
-            array_push($diario, json_encode($a));
+            array_push($diario, $a);
         }
         $eventos = [];
     }
-    print_r(json_encode($diario));
+    // print_r(json_encode($diario)); Respuesta que hay que va a coger el JavaScript 
     
     mysqli_close( $conexion );
 
