@@ -1,28 +1,8 @@
 <body>
-    <button id="boton">Cargar sitio</button>
-    <div id="response">
-
-    </div>
-    <script>
-        function AJAX() {
-            const http = new XMLHttpRequest();
-            const url = 'conexionBBDD.php';
-
-            http.onreadystatechange = function() {
-                if (this.readyState == 4 && this.status == 200) {
-                    document.getElementById("response").innerHTML = this.responseText;
-                    console.log('Response: ', JSON.parse(this.responseText));
-                }
-            }
-
-
-
-            http.open("GET", url);
-            http.send();
-        }
-
-        document.getElementById("boton").addEventListener("click", function() {
-            AJAX();
-        })
-    </script>
+    <div id="response"></div>
+    <!-- <script type="module" src="back/llamadaPHP.js"></script> Llamada al archivo JavaScript que se conceta al back -->
+    <script type="module" src="clasesJavaScript/calcularPhi.js"></script>
+    <script type="module" src="clasesJavaScript/registro.js"></script>
+    <script type="module" src="clasesJavaScript/diario.js"></script>
+    <script type="module" src="clasesJavaScript/tabla.js"></script>
 </body>
