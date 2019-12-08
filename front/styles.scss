@@ -35,34 +35,47 @@ header {
     flex: auto;
     height: 100px;
     background-color: red;
-    label {
-        margin-top: 10px;
-        width: 20%;
+    justify-content: space-between;
+    position: fixed;
+    width: 80%;
+    .tabContainer {
+        display: inline-flex;
+        justify-content: center;
+        width: 30%;
         padding: 10px;
         background-color: blue;
+        img {
+            display: block;
+            max-width: 40px;
+        }
+        label {
+            align-content: flex-end;
+        }
     }
 }
 
 // Contenido
 .contenido {
-    margin-top: 100px;
+    padding-top: 100px;
 }
 
 // Footer
 footer {
     background-color: aquamarine;
-    position: fixed;
+    position: relative;
     bottom: 0px;
-    width: 80%;
+    width: 100%;
     #footerTop {
-        display: inline-flex;
+        justify-content: space-between;
+        display: flex;
         #FAQ {
             a {
                 text-decoration: none;
             }
         }
         #socialMedia {
-            justify-self: flex-end;
+            padding-top: 20px;
+            padding-right: 20px;
             img {
                 max-width: 50px;
             }

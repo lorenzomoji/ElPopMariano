@@ -32,11 +32,13 @@ header {
   flex: auto;
   height: 100px;
   background-color: red;
+  justify-content: space-between;
+  position: fixed;
+  width: 80%;
 }
 header .tabContainer {
   display: inline-flex;
   justify-content: center;
-  margin-top: 10px;
   width: 30%;
   padding: 10px;
   background-color: blue;
@@ -50,23 +52,25 @@ header .tabContainer label {
 }
 
 .contenido {
-  margin-top: 100px;
+  padding-top: 100px;
 }
 
 footer {
   background-color: aquamarine;
-  position: fixed;
+  position: relative;
   bottom: 0px;
-  width: 80%;
+  width: 100%;
 }
 footer #footerTop {
-  display: inline-flex;
+  justify-content: space-between;
+  display: flex;
 }
 footer #footerTop #FAQ a {
   text-decoration: none;
 }
 footer #footerTop #socialMedia {
-  float: right;
+  padding-top: 20px;
+  padding-right: 20px;
 }
 footer #footerTop #socialMedia img {
   max-width: 50px;

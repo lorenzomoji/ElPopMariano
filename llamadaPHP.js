@@ -1,8 +1,9 @@
 export var diario;
+
 function AJAX() {
     const http = new XMLHttpRequest();
     const url = 'back/conexionBBDD.php';
-    
+
     http.open("GET", url);
     http.onreadystatechange = function recogerDiario() {
         if (this.readyState == 4 && this.status == 200) {
@@ -13,7 +14,7 @@ function AJAX() {
             console.log(diario);
         }
         return diario;
-    }
+    };
     http.send();
 }
 
