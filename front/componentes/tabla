@@ -1,0 +1,18 @@
+// import { DIARIO } from '../../diario.js';
+var DIARIO = require('../../diario.js'); 
+console.log(DIARIO);
+
+window.onload = function() {
+    var table = this.document.createElement("table");
+    var tr = this.document.createElement("tr");
+    var th = this.document.createElement("th");
+    var td = this.document.createElement("td");
+    var th_text = this.document.createTextNode('Columna1');
+    var td_text = this.document.createTextNode('Fila1');
+    table.appendChild(tr);
+    tr.appendChild(th);
+    tr.appendChild(td);
+    th.appendChild(th_text);
+    td.appendChild(td_text);
+    this.document.body.appendChild(table);
+}

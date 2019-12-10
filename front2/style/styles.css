@@ -83,6 +83,35 @@ footer #footerBot {
   padding-bottom: 2px;
 }
 
+table {
+  width: 70%;
+  text-align: center;
+  border-collapse: collapse;
+  color: white;
+  table-layout: fixed;
+}
+
+th {
+  background-color: #262626;
+  color: #f8f5f5;
+}
+
+th, td {
+  padding: 20px;
+}
+
+tr:hover {
+  background-color: aquamarine;
+  color: rgb(32, 34, 31);
+}
+
+tr:nth-child(even) {
+  background-color: #e0d9d9;
+}
+tr:nth-child(odd) {
+  background-color: #cdcdd1;
+}
+
 /* Add media queries for responsiveness - when the screen is 500px wide or less, stack the links on top of each other */
 @media screen and (max-width: 900px) {
   section {
