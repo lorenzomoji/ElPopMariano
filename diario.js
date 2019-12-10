@@ -1,4 +1,4 @@
-export const DIARIO = [
+const DIARIO = [
     {"eventos":["mejillones","caminar","siesta con La Vuelta"],"pulpo":false}, //1
     {"eventos":["pan de millo","filloas","me lave los dientes","siesta con La Vuelta","baño en a Lanzada"],"pulpo":false},
     {"eventos":["mejillones","chinchos","me lave los dientes","Panorama","siesta con La Vuelta"],"pulpo":false},
@@ -90,3 +90,5 @@ export const DIARIO = [
     { "eventos": ["pan de millo", "me lave los dientes", "ver el fúbol", "siesta con La Vuelta"], "pulpo": false },
     { "eventos": ["empanada de bacalao", "percebes", "me lave los dientes", "siesta con La Vuelta"], "pulpo": false }
 ];
+
+module.exports = DIARIO;
