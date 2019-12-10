@@ -2,44 +2,36 @@
 <html lang="es">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" type="text/css" href="Style.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link href="https://fonts.googleapis.com/css?family=Sulphur+Point&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="Style.css" />
     <title>Pop</title>
-    <script type="module" src="clasesJavaScript/calcularPhi.js"></script>
 </head>
 
 <body>
     <div id="allContainer">
-
         <header>
-
+            <img src="Img/logo.png" id="logo" />
             <label for="tab1" class="tabContainer">
-                <img src="img/iconFb.png" alt="">
-                <label for="tab1"> Inicio </label>
-            </label>
+          Inicio
+        </label>
             <label for="tab2" class="tabContainer">
-                <img src="img/iconFb.png" alt="">
-                <label for="tab2"> Diario </label>
-            </label>
+          Diario
+        </label>
             <label for="tab3" class="tabContainer">
-                <img src="img/iconFb.png" alt="">
-                <label for="tab3"> Inicio</label>
-            </label>
-
+          Inicio
+        </label>
         </header>
 
-
-        <div class="contenido">
-
+        <section class="contenido">
             <!-- Primer Tab -->
             <input type="radio" id="tab1" class="tabTrigger" name="tab" checked="checked" />
             <div class="tabContent">
-                <div>
-                    <img src="img/iconFb.png" alt="">
-                </div>
-                <div>
+                <img src="img/pop2.jpg" alt="" />
+
+                <div class="text">
                     <p>
                         De vez en cuando, usualmente entre las 8 y las 10 de la noche, Mariano se transforma en un escurridizo pulpo de gran tamaño con una larga barba blanca, lo que en Galicia llamamos un pulpo de raza loba. Por un lado, Mariano está agradecido por no sufrir
                         la típica licantropía de los gallegos. En vez de preocuparse por comerse accidentalmente al paisano de al lado, se preocupa de no terminar en la pota los martes en los que hay feria del pulpo en el pueblo. Tras varias ocasiones
@@ -54,11 +46,8 @@
             <!-- Segundo Tab -->
             <input type="radio" id="tab2" class="tabTrigger" name="tab" />
             <div class="tabContent">
-
                 <div class="listaDiario"></div>
-                <button onclick="">Carga OStia</button>
-
-
+                <button onclick="">Carga Ostia</button>
             </div>
 
             <!-- tercer Tab -->
@@ -66,40 +55,60 @@
             <div class="tabContent">
                 Relacion phi
             </div>
-        </div>
+        </section>
 
         <footer>
             <div id="footerTop">
                 <div id="FAQ">
                     <ul>
-                        <li> <a href="https://i.pinimg.com/originals/20/06/9f/20069fbc522b76e5b4d789d812f89031.jpg"> Necesitas ayuda?  </a></li>
-                        <li> <a href="https://www.telefonodelaesperanza.org/"> Sigues necesitando ayuda?</a></li>
-                        <li> <a href=""> Información casi legal </a></li>
+                        <li>
+                            <a href="https://i.pinimg.com/originals/20/06/9f/20069fbc522b76e5b4d789d812f89031.jpg">
+                  Necesitas ayuda?
+                </a>
+                        </li>
+                        <li>
+                            <a href="https://www.telefonodelaesperanza.org/">
+                  Sigues necesitando ayuda?</a
+                >
+              </li>
+              <li><a href=""> Información casi legal </a></li>
                     </ul>
                 </div>
                 <div id="socialMedia">
-                    <img src="Img/iconFb.png" alt="hola" class="socialMedia">
-                    <img src="Img/iconFb.png" alt="" class="socialMedia">
-                    <img src="Img/iconFb.png" alt="" class="socialMedia">
-                    <img src="Img/iconFb.png" alt="" class="socialMedia">
+                    <img src="Img/iconFb.png" alt="hola" class="socialMedia" />
+                    <img src="Img/iconInsta.png" alt="" class="socialMedia" />
+                    <img src="Img/iconTwitter.png" alt="" class="socialMedia" />
+                    <img src="Img/iconln.png" alt="" class="socialMedia" />
                 </div>
-
             </div>
             <div id="footerBot">
                 <span> &#169; Projecte pop 2019</span>
             </div>
-
         </footer>
     </div>
-
 </body>
-
-<script>
-    import {
-        DIARIO
-    } from "../diar.json";
-    console.log(JSON.parse(DIARIO));
-</script>
-
+<script type="module" src="clasesJavaScript/calcularPhi.js"></script>
 
 </html>
+
+<!-- function creFormas(){
+    var f="";
+    for(var i=0;i<5;i++){
+    f+="<form id='f_"+i+"' onsubmit="fmensajes"+i+"();">"
+    f+="<input type='text' id='txt'"+i+" >"
+    f+=</form>
+    }
+    document.getElementById("misFormas").innerHTML=f;
+    }
+    
+    <div id="misFormas">function creFormas(){
+    var f="";
+    for(var i=0;i<5;i++){
+    f+="<form id='f_"+i+"' onsubmit="fmensajes"+i+"();">"
+    f+="<input type='text' id='txt'"+i+" >"
+    f+=</form>
+    }
+    document.getElementById("misFormas").innerHTML=f;
+    }
+    
+    <div id="misFormas"> -->
