@@ -33,3 +33,4 @@ function genera_tabla() {
     // modifica el atributo "border" de la tabla y lo fija a "2";
     tabla.setAttribute("border", "2");
   }
+  module.exports = genera_tabla();
