@@ -1,5 +1,6 @@
 //colors
 $my-greyDark: #262626;
+$my-greyMid: #58595b;
 //all
 body {
     font-family: "Sulphur Point", sans-serif;
@@ -43,7 +44,7 @@ body {
 //Footer
 footer {
     font-size: 12px;
-    background-color: $my-greyDark;
+    background-color: $my-greyMid;
     color: white;
     position: relative;
     bottom: 0px;
@@ -61,8 +62,8 @@ footer {
             }
         }
         #socialMedia {
-            padding-top: 0px;
-            padding-right: 0px;
+            padding-top: 20px;
+            padding-right: 20px;
             padding-left: 10px;
             img {
                 max-width: 40px;
