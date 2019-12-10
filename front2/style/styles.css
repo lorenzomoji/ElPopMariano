@@ -40,6 +40,17 @@ body {
   max-width: 20%;
 }
 
+section {
+  display: flex;
+}
+section img {
+  padding-top: 30px;
+  max-width: 400px;
+}
+section .texto {
+  padding: 20px;
+}
+
 footer {
   font-size: 12px;
   background-color: #58595b;
@@ -102,6 +113,14 @@ tr:nth-child(odd) {
 }
 
 /* Add media queries for responsiveness - when the screen is 500px wide or less, stack the links on top of each other */
+@media screen and (max-width: 900px) {
+  section {
+    display: block;
+  }
+  section img {
+    margin-left: 25%;
+  }
+}
 @media screen and (max-width: 600px) {
   body {
     margin-left: 0%;
@@ -117,6 +136,18 @@ tr:nth-child(odd) {
   .header-right {
     float: none;
     margin: none;
+  }
+
+  section {
+    margin: none;
+    display: block;
+  }
+  section img {
+    padding-top: 5px;
+    max-width: 200px;
+  }
+  section .texto {
+    padding: 5px;
   }
 
   footer #footerTop {
