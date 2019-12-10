@@ -1,0 +1,85 @@
+body {
+  margin: 0px;
+  padding: 0px;
+}
+
+#allContainer {
+  background-color: aqua;
+  margin-left: auto;
+  margin-right: auto;
+  top: 0px;
+  width: 80%;
+}
+
+.fill-space {
+  flex: 1 1 auto;
+}
+
+.tabTrigger {
+  display: none;
+  padding: 0%;
+}
+
+input:checked + .tabContent {
+  display: block;
+}
+
+.tabContent {
+  display: none;
+}
+
+header {
+  flex: auto;
+  height: 100px;
+  background-color: red;
+  justify-content: space-between;
+  position: fixed;
+  width: 80%;
+}
+header .tabContainer {
+  display: inline-flex;
+  justify-content: center;
+  width: 30%;
+  padding: 10px;
+  background-color: blue;
+}
+header .tabContainer img {
+  display: block;
+  max-width: 40px;
+}
+header .tabContainer label {
+  align-content: flex-end;
+}
+
+.contenido {
+  padding-top: 100px;
+}
+
+footer {
+  background-color: aquamarine;
+  position: relative;
+  bottom: 0px;
+  width: 100%;
+}
+footer #footerTop {
+  justify-content: space-between;
+  display: flex;
+}
+footer #footerTop #FAQ a {
+  text-decoration: none;
+}
+footer #footerTop #socialMedia {
+  padding-top: 20px;
+  padding-right: 20px;
+}
+footer #footerTop #socialMedia img {
+  max-width: 50px;
+}
+footer #footerBot {
+  text-align: center;
+}
+
+
+
+
+/*# sourceMappingURL=/Style.451371b1.css.map */
