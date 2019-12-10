@@ -1,11 +1,17 @@
+$primary: #6f8191;
+$primary-dark: #3d4249;
+$primary-light: #cbd2d9;
+$blue: #8dcaff;
+$blue-dark: #2097ff;
 // General
 body {
+    font-family: "Sulphur Point", sans-serif;
     margin: 0px;
     padding: 0px;
 }
 
 #allContainer {
-    background-color: aqua;
+    background-color: $primary-light;
     margin-left: auto;
     margin-right: auto;
     top: 0px;
@@ -34,34 +40,47 @@ input:checked+.tabContent {
 header {
     flex: auto;
     height: 100px;
-    background-color: red;
-    justify-content: space-between;
+    background-color: $primary-dark;
     position: fixed;
     width: 80%;
+    #logo {
+        max-height: 100px;
+    }
     .tabContainer {
         display: inline-flex;
-        justify-content: center;
-        width: 30%;
+        vertical-align: top;
+        position: relative;
+        width: 20%;
         padding: 10px;
-        background-color: blue;
-        img {
-            display: block;
-            max-width: 40px;
-        }
-        label {
-            align-content: flex-end;
-        }
+        background-color: $blue-dark;
+        margin: auto;
+        justify-content: center;
+        font-size: 20px;
+        font-weight: bold;
+    }
+    .tabContainer:active {
+        background-color: $blue-dark;
     }
 }
 
 // Contenido
 .contenido {
-    padding-top: 100px;
+    padding-left: 3em;
+    padding-right: 3em;
+    padding-top: 120px;
+    margin-bottom: 3em;
+    min-height: min-content;
+    justify-content: center;
+    img {
+        border-radius: 100px;
+        max-width: 300px;
+    }
 }
 
 // Footer
 footer {
-    background-color: aquamarine;
+    background-color: $primary-dark;
+    color: white;
     position: relative;
     bottom: 0px;
     width: 100%;
@@ -70,6 +89,7 @@ footer {
         display: flex;
         #FAQ {
             a {
+                color: white;
                 text-decoration: none;
             }
         }
@@ -85,32 +105,3 @@ footer {
         text-align: center;
     }
 }
-
-// Paleta de colores
-$base-palette: ( 'base': #ff6351, 'colors': #cfdfe8 #bfb9c3 #cf9192 #ff6351 #bf413c #7f3128 #732c24) !default;
-// Por testear
-// @function create-palette($base-color) {
-//     $palette: ();
-//     @each $diff in $palette-diff {
-//       $palette: append($palette, apply-diff($base-color, $diff));
-//     }
-//     @return $palette;
-//   }
-// @function lightest($palette) {
-//     @if not map-has-key($palette, 'lightest') {
-//       @warn "`#{inspect($palette)}` doesn't seem to have a key named `lightest`.";
-//     }
-//     @return map-get($palette, 'lightest');
-//   }
-//   @function lighter($palette) {
-//     @if not map-has-key($palette, 'lighter') {
-//       @warn "`#{inspect($palette)}` doesn't seem to have a key named `lighter`.";
-//     }
-//     @return map-get($palette, 'lighter');
-//   }
-//   @function light($palette) {
-//     @if not map-has-key($palette, 'light') {
-//       @warn "`#{inspect($palette)}` doesn't seem to have a key named `light`.";
-//     }
-//     @return map-get($palette, 'light');
-//   }
