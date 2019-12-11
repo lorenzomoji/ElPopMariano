@@ -1,4 +1,4 @@
-import { DIARIO } from '../diario.js';
+import { DIARIO } from '../bbdd/diario';
 
 var registro = new Object();
 registro.eventos = ['queixo', 'leer Marca', 'comer Paella', 'programar', 'siesta'];

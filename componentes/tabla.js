@@ -1,4 +1,5 @@
-DIARIO = require('../diario');
+DIARIO = require('../bbdd/diario');
+var evento = 'queixo';
 
 function genera_tabla() {
     // Obtener la referencia del elemento body

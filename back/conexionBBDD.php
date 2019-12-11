@@ -12,7 +12,7 @@
     $objeto ->pop = false;
     $diario = [];
 
-    $conexion = mysqli_connect( $servidor, $usuario, "" ) or die ("No se ha podido conectar al servidor BBDD");
+    $conexion = mysqli_connect( $servidor, $usuario, $constraseña ) or die ("No se ha podido conectar al servidor BBDD");
 
     $db = mysqli_select_db( $conexion, $basededatos ) or die ( "Upps! Pues va a ser que no se ha podido conectar a la base de datos" );
 

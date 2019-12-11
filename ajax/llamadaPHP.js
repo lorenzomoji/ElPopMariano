@@ -1,5 +1,5 @@
-export var diario;
-import { DIARIO } from 'diario.js';
+export var diarioFront;
+import { DIARIO } from '../bbdd/diario';
 function AJAX() {
     const http = new XMLHttpRequest();
     const url = 'back/conexionBBDD.php';
@@ -19,7 +19,7 @@ function AJAX() {
         http.send();
         } catch(error) {
             console.error(error);
-            diario = DIARIO;
+            diarioFront = DIARIO;
         } //En caso de que no se recoja del back, que recoja el diario de un JSON.
     } 
 

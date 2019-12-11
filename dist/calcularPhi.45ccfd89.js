@@ -117,7 +117,7 @@ parcelRequire = (function (modules, cache, entry, globalName) {
   }
 
   return newRequire;
-})({"../../diario.js":[function(require,module,exports) {
+})({"../../bbdd/diario.js":[function(require,module,exports) {
 var DIARIO = [{
   "eventos": ["mejillones", "caminar", "siesta con La Vuelta"],
   "pulpo": false
@@ -395,7 +395,7 @@ var DIARIO = [{
 }];
 module.exports = DIARIO;
 },{}],"../../componentes/grafica.js":[function(require,module,exports) {
-DIARIO = require('../diario');
+DIARIO = require('../bbdd/diario');
 
 function generaGrafica() {
   var arrayComprobante = [];
@@ -419,7 +419,7 @@ function generaGrafica() {
 }
 
 module.exports = generaGrafica();
-},{"../diario":"../../diario.js"}],"../../clasesJavaScript/calcularPhi.js":[function(require,module,exports) {
+},{"../bbdd/diario":"../../bbdd/diario.js"}],"../../clasesJavaScript/calcularPhi.js":[function(require,module,exports) {
 require('../componentes/grafica');
 
 function numerador(evento) {
@@ -561,7 +561,7 @@ console.log('Transformación Pulpo: ' + transformacionPulpo());
 console.log('No transformación Pulpo: ' + noTransformacionPulpo());
 console.log('Resultado Denominador: ' + denominador('queixo'));
 console.log('Resultado Funcion Phi: ' + calcularPhi('queixo'));
-},{"../componentes/grafica":"../../componentes/grafica.js"}],"../../../../../../Users/Moji/AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+},{"../componentes/grafica":"../../componentes/grafica.js"}],"../../../../../../../Users/mojim/AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -589,7 +589,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "63338" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "59153" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
@@ -765,5 +765,5 @@ function hmrAcceptRun(bundle, id) {
     return true;
   }
 }
-},{}]},{},["../../../../../../Users/Moji/AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/hmr-runtime.js","../../clasesJavaScript/calcularPhi.js"], null)
+},{}]},{},["../../../../../../../Users/mojim/AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/hmr-runtime.js","../../clasesJavaScript/calcularPhi.js"], null)
 //# sourceMappingURL=/calcularPhi.45ccfd89.js.map

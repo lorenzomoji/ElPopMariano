@@ -117,7 +117,7 @@ parcelRequire = (function (modules, cache, entry, globalName) {
   }
 
   return newRequire;
-})({"../../diario.js":[function(require,module,exports) {
+})({"../../bbdd/diario.js":[function(require,module,exports) {
 var DIARIO = [{
   "eventos": ["mejillones", "caminar", "siesta con La Vuelta"],
   "pulpo": false
@@ -395,7 +395,8 @@ var DIARIO = [{
 }];
 module.exports = DIARIO;
 },{}],"../../componentes/tabla.js":[function(require,module,exports) {
-DIARIO = require('../diario');
+DIARIO = require('../bbdd/diario');
+var evento = 'queixo';
 
 function genera_tabla() {
   // Obtener la referencia del elemento body
@@ -434,7 +435,7 @@ function genera_tabla() {
 }
 
 module.exports = genera_tabla();
-},{"../diario":"../../diario.js"}],"../../../../../../Users/Moji/AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+},{"../bbdd/diario":"../../bbdd/diario.js"}],"../../../../../../../Users/mojim/AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -462,7 +463,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "63338" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "59153" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
@@ -638,5 +639,5 @@ function hmrAcceptRun(bundle, id) {
     return true;
   }
 }
-},{}]},{},["../../../../../../Users/Moji/AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/hmr-runtime.js","../../componentes/tabla.js"], null)
+},{}]},{},["../../../../../../../Users/mojim/AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/hmr-runtime.js","../../componentes/tabla.js"], null)
 //# sourceMappingURL=/tabla.e12a5f42.js.map

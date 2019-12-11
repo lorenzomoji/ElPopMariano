@@ -1,4 +1,4 @@
-DIARIO = require('../diario');
+DIARIO = require('../bbdd/diario');
 
 
 function generaGrafica() {
