@@ -136,9 +136,6 @@ footer #footerBot {
   section {
     display: block;
   }
-  section img {
-    margin-left: 25%;
-  }
   section .text {
     font-size: 0.9em;
   }
