@@ -6,18 +6,6 @@ body {
   margin-bottom: 0px;
 }
 
-.grid-container {
-  position: relative;
-  width: 80%;
-  display: grid;
-  padding: 10px;
-}
-.grid-item {
-  padding: 20px;
-  font-size: 30px;
-  text-align: center;
-}
-
 .header {
   overflow: hidden;
   background-color: #262626;
@@ -52,8 +40,28 @@ body {
   max-width: 20%;
 }
 
+.gridContainer {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 10px;
+}
+.gridContainer img {
+  max-width: 250px;
+}
+.gridContainer .grid-item {
+  font-size: 30px;
+  display: flex;
+  justify-content: center;
+  font-weight: bold;
+}
+
 section {
   display: flex;
+  justify-content: center;
+}
+section div {
+  display: flex;
+  justify-content: center;
 }
 section img {
   padding-top: 30px;
@@ -61,6 +69,34 @@ section img {
 }
 section .texto {
   padding: 20px;
+}
+section table {
+  width: 80%;
+  text-align: center;
+  border-collapse: collapse;
+  color: black;
+  table-layout: fixed;
+  -webkit-box-shadow: 12px 10px 18px -4px rgba(0, 0, 0, 0.39);
+  -moz-box-shadow: 12px 10px 18px -4px rgba(0, 0, 0, 0.39);
+  box-shadow: 12px 10px 18px -4px rgba(0, 0, 0, 0.39);
+}
+section th {
+  background-color: #262626;
+  color: #dadada;
+}
+section th,
+section td {
+  padding: 20px;
+}
+section tr:hover {
+  background-color: dodgerblue !important;
+  color: #dadada;
+}
+section tr:nth-child(even) {
+  background-color: #f1eaea;
+}
+section tr:nth-child(odd) {
+  background-color: #d4d4db;
 }
 
 footer {
@@ -95,45 +131,7 @@ footer #footerBot {
   padding-bottom: 2px;
 }
 
-table {
-  width: 70%;
-  text-align: center;
-  border-collapse: collapse;
-  color: white;
-  table-layout: fixed;
-  -webkit-box-shadow: 12px 10px 18px -4px rgba(0,0,0,0.39);
--moz-box-shadow: 12px 10px 18px -4px rgba(0,0,0,0.39);
-box-shadow: 12px 10px 18px -4px rgba(0,0,0,0.39);
-}
-
-th {
-  background-color: #262626;
-  color: #f8f5f5;
-}
-
-th, td {
-  padding: 20px;
-}
-
-tr:hover {
-  background-color: aquamarine;
-  color: rgb(32, 34, 31);
-}
-
-tr:nth-child(even) {
-  background-color: #e0d9d9;
-}
-tr:nth-child(odd) {
-  background-color: #cdcdd1;
-}
-
 /* Add media queries for responsiveness - when the screen is 500px wide or less, stack the links on top of each other */
-@media screen and (max-width: 975px) {
-  table {
-    width: 100%;
-  }
-}
-
 @media screen and (max-width: 900px) {
   section {
     display: block;
@@ -145,14 +143,6 @@ tr:nth-child(odd) {
     font-size: 0.9em;
   }
 }
-
-@media screen and (max-width: 700px) {
-  table {
-    display: block;
-    overflow-x: auto;
-  }
-}
-
 @media screen and (max-width: 600px) {
   body {
     margin-left: 0%;

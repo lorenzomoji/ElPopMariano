@@ -1,6 +1,9 @@
 //colors
 $my-greyDark: #262626;
 $my-greyMid: #58595b;
+$my-greyPale: #dadada;
+$my-brown-pale1: #f1eaea;
+$my-brown-pale2: #d4d4db;
 $my-blue: dodgerblue;
 //all
 body {
@@ -45,14 +48,62 @@ body {
     }
 }
 
+.gridContainer {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 10px;
+    img {
+        max-width: 250px;
+    }
+    .grid-item {
+        font-size: 30px;
+        display: flex;
+        justify-content: center;
+        font-weight: bold;
+    }
+}
+
 section {
     display: flex;
+    justify-content: center;
+    div {
+        display: flex;
+        justify-content: center;
+    }
     img {
         padding-top: 30px;
         max-width: 400px;
     }
     .texto {
         padding: 20px;
+    }
+    table {
+        width: 80%;
+        text-align: center;
+        border-collapse: collapse;
+        color: black;
+        table-layout: fixed;
+        -webkit-box-shadow: 12px 10px 18px -4px rgba(0, 0, 0, 0.39);
+        -moz-box-shadow: 12px 10px 18px -4px rgba(0, 0, 0, 0.39);
+        box-shadow: 12px 10px 18px -4px rgba(0, 0, 0, 0.39);
+    }
+    th {
+        background-color: $my-greyDark;
+        color: $my-greyPale;
+    }
+    th,
+    td {
+        padding: 20px;
+    }
+    tr:hover {
+        background-color: $my-blue !important;
+        color: $my-greyPale;
+    }
+    tr:nth-child(even) {
+        background-color: $my-brown-pale1;
+    }
+    tr:nth-child(odd) {
+        background-color: $my-brown-pale2;
     }
 }
 
