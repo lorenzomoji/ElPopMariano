@@ -1,7 +1,4 @@
-// import { diario } from './llamadaPHP.js';
-import { DIARIO } from '../diario.js';
-
-console.log('Diario: ', DIARIO);
+require('../componentes/grafica');
 
 function numerador(evento) {
     return (pulpoTrueEventoTrue(evento) * pulpoFalseEventoFalse(evento)) - (pulpoFalseEventoTrue(evento) - pulpoTrueEventoFalse(evento));

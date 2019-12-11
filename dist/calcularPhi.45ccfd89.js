@@ -408,7 +408,6 @@ function generaGrafica() {
         var li = document.createElement("li");
         arrayComprobante.push(DIARIO[i].eventos[j]);
         var li_text = document.createTextNode(DIARIO[i].eventos[j]);
-        clickLinea(DIARIO[i].eventos[j]);
       }
 
       ul.appendChild(li);
@@ -419,13 +418,150 @@ function generaGrafica() {
   body.appendChild(ul);
 }
 
-function clickLinea(eventos) {
-  var phi = eventos;
-  module.exports = phi;
+module.exports = generaGrafica();
+},{"../diario":"../../diario.js"}],"../../clasesJavaScript/calcularPhi.js":[function(require,module,exports) {
+require('../componentes/grafica');
+
+function numerador(evento) {
+  return pulpoTrueEventoTrue(evento) * pulpoFalseEventoFalse(evento) - (pulpoFalseEventoTrue(evento) - pulpoTrueEventoFalse(evento));
 }
 
-module.exports = generaGrafica();
-},{"../diario":"../../diario.js"}],"../../../../../../Users/Moji/AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+function denominador(evento) {
+  return Math.sqrt(aparicionEvento(evento) * noTransformacionPulpo() * transformacionPulpo() * noAparicionEvento(evento));
+}
+
+function calcularPhi(evento) {
+  return numerador(evento) / denominador(evento);
+}
+
+function aparicionEvento(evento) {
+  var contador = 0;
+
+  for (var i = 0; i < DIARIO.length; i++) {
+    for (var j = 0; j < DIARIO[i].eventos.length; j++) {
+      if (DIARIO[i].eventos[j] === evento) {
+        contador = contador + 1;
+      }
+    }
+  }
+
+  return contador;
+}
+
+function noAparicionEvento(evento) {
+  return DIARIO.length - aparicionEvento(evento);
+}
+
+function transformacionPulpo() {
+  var contador = 0;
+
+  for (var i = 0; i < DIARIO.length; i++) {
+    for (var j = 0; j < DIARIO[i].eventos.length; j++) {
+      if (DIARIO[i].pulpo === true) {
+        contador = contador + 1;
+      }
+    }
+  }
+
+  return contador;
+}
+
+function noTransformacionPulpo() {
+  return DIARIO.length - transformacionPulpo();
+}
+
+function pulpoTrueEventoTrue(evento) {
+  var contador = 0;
+
+  for (var i = 0; i < DIARIO.length; i++) {
+    for (var j = 0; j < DIARIO[i].eventos.length; j++) {
+      if (DIARIO[i].eventos[j] === evento && DIARIO[i].pulpo === true) {
+        contador = contador + 1;
+      }
+    }
+  }
+
+  return contador;
+}
+
+function pulpoFalseEventoTrue(evento) {
+  var contador = 0;
+
+  for (var i = 0; i < DIARIO.length; i++) {
+    for (var j = 0; j < DIARIO[i].eventos.length; j++) {
+      if (DIARIO[i].eventos[j] === evento && DIARIO[i].pulpo === false) {
+        contador = contador + 1;
+      }
+    }
+  }
+
+  return contador;
+}
+
+function pulpoTrueEventoFalse(evento) {
+  var contador = 0;
+
+  for (var i = 0; i < DIARIO.length; i++) {
+    var isEvento = true;
+
+    for (var j = 0; j < DIARIO[i].eventos.length; j++) {
+      if (DIARIO[i].eventos[j] === evento && DIARIO[i].pulpo === true) {
+        isEvento = true;
+        break;
+      }
+
+      if (DIARIO[i].eventos[j] !== evento && DIARIO[i].pulpo === true) {
+        isEvento = false;
+      }
+    }
+
+    if (isEvento === false) {
+      contador = contador + 1; //Más fácil de leer que con sintactic sugar
+    }
+  }
+
+  return contador;
+}
+
+function pulpoFalseEventoFalse(evento) {
+  var contador = 0;
+
+  for (var i = 0; i < DIARIO.length; i++) {
+    var isEvento = true;
+
+    if (DIARIO[i].pulpo === false) {
+      for (var j = 0; j < DIARIO[i].eventos.length; j++) {
+        if (DIARIO[i].eventos[j] != evento) {
+          isEvento = false;
+        }
+
+        if (DIARIO[i].eventos[j] === evento) {
+          isEvento = true;
+          break;
+        }
+      }
+    }
+
+    if (isEvento === false) {
+      contador = contador + 1;
+    }
+  }
+
+  return contador;
+}
+
+console.log('Contador Evento True y Pulpo True: ' + pulpoTrueEventoTrue('queixo'));
+console.log('Contador Evento True y Pulpo False: ' + pulpoFalseEventoTrue('queixo'));
+console.log('Contador Evento False y Pulpo True: ' + pulpoTrueEventoFalse('queixo'));
+console.log('Contador Evento False y Pulpo False: ' + pulpoFalseEventoFalse('queixo'));
+console.log('Resultado Numerador: ' + numerador('queixo'));
+console.log('Aparicion Evento: ' + aparicionEvento('queixo'));
+console.log('No aparicion Evento: ' + noAparicionEvento('queixo'));
+console.log('Transformación Pulpo: ' + transformacionPulpo());
+console.log('No transformación Pulpo: ' + noTransformacionPulpo());
+console.log('Resultado Denominador: ' + denominador('queixo'));
+console.log('Resultado Funcion Phi: ' + calcularPhi('queixo'));
+},{"../componentes/grafica":"../../componentes/grafica.js"}],"../../../../../../Users/Moji/AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -629,5 +765,5 @@ function hmrAcceptRun(bundle, id) {
     return true;
   }
 }
-},{}]},{},["../../../../../../Users/Moji/AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/hmr-runtime.js","../../componentes/grafica.js"], null)
-//# sourceMappingURL=/grafica.83817241.js.map
+},{}]},{},["../../../../../../Users/Moji/AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/hmr-runtime.js","../../clasesJavaScript/calcularPhi.js"], null)
+//# sourceMappingURL=/calcularPhi.45ccfd89.js.map
