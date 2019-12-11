@@ -394,46 +394,31 @@ var DIARIO = [{
   "pulpo": false
 }];
 module.exports = DIARIO;
-},{}],"../../componentes/tabla.js":[function(require,module,exports) {
+},{}],"../../componentes/grafica.js":[function(require,module,exports) {
 DIARIO = require('../diario');
 
-function genera_tabla() {
-  // Obtener la referencia del elemento body
-  var body = document.getElementsByTagName("body")[0]; // Crea un elemento <table> y un elemento <tbody>
-
-  var tabla = document.createElement("table");
-  var thDia = document.createElement("th");
-  var thEventos = document.createElement("th");
-  var thPop = document.createElement("th");
-  var dia = document.createTextNode('Texto');
-  var eventos = document.createTextNode('Eventos');
-  var pop = document.createTextNode('Pop');
-  var tblBody = document.createElement("tbody");
-  tabla.appendChild(thDia);
-  thDia.appendChild(dia);
-  tabla.appendChild(thEventos);
-  thEventos.appendChild(eventos);
-  tabla.appendChild(thPop);
-  thPop.appendChild(pop);
+function generaGrafica() {
+  var arrayComprobante = [];
+  var body = document.getElementsByTagName("body")[0];
+  var ul = document.createElement("ul");
 
   for (var i = 0; i < DIARIO.length; i++) {
-    var hilera = document.createElement("tr");
-    tabla.appendChild(hilera);
-
     for (var j = 0; j < DIARIO[i].eventos.length; j++) {
-      var td = document.createElement("td");
-      hilera.appendChild(td);
-      td_text = document.createTextNode(DIARIO[i].eventos[j]);
-      td.appendChild(td_text);
+      if (!arrayComprobante.includes(DIARIO[i].eventos[j])) {
+        var li = document.createElement("li");
+        arrayComprobante.push(DIARIO[i].eventos[j]);
+        var li_text = document.createTextNode(DIARIO[i].eventos[j]);
+      }
+
+      ul.appendChild(li);
+      li.appendChild(li_text);
     }
   }
 
-  body.appendChild(tabla); // modifica el atributo "border" de la tabla y lo fija a "2";
-
-  tabla.setAttribute("border", "2");
+  body.appendChild(ul);
 }
 
-module.exports = genera_tabla();
+module.exports = generaGrafica();
 },{"../diario":"../../diario.js"}],"../../../../../../Users/Moji/AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
@@ -638,5 +623,5 @@ function hmrAcceptRun(bundle, id) {
     return true;
   }
 }
-},{}]},{},["../../../../../../Users/Moji/AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/hmr-runtime.js","../../componentes/tabla.js"], null)
-//# sourceMappingURL=/tabla.e12a5f42.js.map
+},{}]},{},["../../../../../../Users/Moji/AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/hmr-runtime.js","../../componentes/grafica.js"], null)
+//# sourceMappingURL=/grafica.83817241.js.map
